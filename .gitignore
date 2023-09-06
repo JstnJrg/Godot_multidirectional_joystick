@@ -1,8 +1,3 @@
-# Plugin Specific ignores
-default_env.tres
-icon.png
-icon.png.import
-
 # Godot-specific ignores
 .import/
 export.cfg
