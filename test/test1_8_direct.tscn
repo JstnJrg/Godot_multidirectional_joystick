@@ -18,6 +18,3 @@ position = Vector2( 151, 453 )
 script = ExtResource( 1 )
 bigger_texture = ExtResource( 2 )
 small_texture = ExtResource( 3 )
-
-[connection signal="stop_update_pos" from="player/UI/joystick multidirectionnal" to="player" method="_on_joystick_multidirectionnal_stop_update_pos"]
-[connection signal="update_pos" from="player/UI/joystick multidirectionnal" to="player" method="_on_joystick_multidirectionnal_update_pos"]

@@ -29,8 +29,10 @@ func _draw() -> void:
 
 func _on_joystick_multidirectionnal_stop_update_pos(pos) -> void:
 	motion = pos
+	print(pos)
 
 func _on_joystick_multidirectionnal_update_pos(pos) -> void:
 	motion = pos
+	
 
 
