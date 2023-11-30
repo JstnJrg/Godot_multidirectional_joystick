@@ -3,3 +3,4 @@
 
 **Configuring the Addon**
  - Go to Project Settings -> Plugin and enable the plugin
+ - There is a demo of how to use the plugin
