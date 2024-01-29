@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/scripts/joystick.gd" type="Script" id=1]
+[ext_resource path="res://addons/textures/smaller.svg" type="Texture" id=2]
+[ext_resource path="res://addons/textures/bigger_ct4.svg" type="Texture" id=3]
+[ext_resource path="res://test/player.tscn" type="PackedScene" id=4]
+
+[node name="test1" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 312, 158 )
+max_length = 40
+
+[node name="UI" type="CanvasLayer" parent="player"]
+
+[node name="joystick multidirectionnal" type="Node2D" parent="player/UI"]
+position = Vector2( 171, 468 )
+script = ExtResource( 1 )
+bigger_texture = ExtResource( 3 )
+small_texture = ExtResource( 2 )
+circles_offset = 50.0
+draw_circle = false
+
+[connection signal="stop_update_pos" from="player/UI/joystick multidirectionnal" to="player" method="_on_joystick_multidirectionnal_stop_update_pos"]
+[connection signal="update_pos" from="player/UI/joystick multidirectionnal" to="player" method="_on_joystick_multidirectionnal_update_pos"]

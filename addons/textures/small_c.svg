@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-205 297 200 200" enable-background="new -205 297 200 200" xml:space="preserve">
+<g>
+	<g id="XMLID_17_">
+		
+			<image overflow="visible" enable-background="new    " width="650" height="650" id="XMLID_18_" xlink:href="ECC3D74C.png"  transform="matrix(0.2374 -4.519398e-004 4.519398e-004 0.2374 -182.3067 319.987)">
+		</image>
+	</g>
+	<g id="XMLID_3_">
+		<g id="XMLID_4_">
+			<radialGradient id="XMLID_2_" cx="-105.1102" cy="396.8902" r="40.9" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+				<stop  offset="1" style="stop-color:#00FFFF"/>
+			</radialGradient>
+			
+				<circle id="XMLID_16_" fill="url(#XMLID_2_)" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" cx="-105.1" cy="396.9" r="40.9"/>
+			<radialGradient id="XMLID_6_" cx="-105.1441" cy="365.9053" r="4.48" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+				<stop  offset="1" style="stop-color:#00FFFF"/>
+			</radialGradient>
+			<path id="XMLID_10_" fill="url(#XMLID_6_)" stroke="#000000" stroke-width="0.2" stroke-miterlimit="10" d="M-109.6,367.2
+				l2.7-4.6c0.8-1.3,2.7-1.3,3.4,0l2.7,4.6c0.8,1.3-0.2,3-1.7,3l-5.4,0C-109.4,370.1-110.3,368.5-109.6,367.2z"/>
+			<radialGradient id="XMLID_7_" cx="-136.7951" cy="396.9254" r="4.48" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+				<stop  offset="1" style="stop-color:#00FFFF"/>
+			</radialGradient>
+			<path id="XMLID_9_" fill="url(#XMLID_7_)" stroke="#000000" stroke-width="0.2" stroke-miterlimit="10" d="M-135.5,401.3
+				l-4.6-2.7c-1.3-0.8-1.3-2.7,0-3.4l4.6-2.7c1.3-0.8,3,0.2,3,1.7l0,5.4C-132.5,401.1-134.1,402-135.5,401.3z"/>
+			<radialGradient id="XMLID_11_" cx="-73.4253" cy="396.8134" r="4.48" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+				<stop  offset="1" style="stop-color:#00FFFF"/>
+			</radialGradient>
+			<path id="XMLID_8_" fill="url(#XMLID_11_)" stroke="#000000" stroke-width="0.2" stroke-miterlimit="10" d="M-74.7,401.2l4.6-2.7
+				c1.3-0.8,1.3-2.7,0-3.4l-4.6-2.7c-1.3-0.8-3,0.2-3,1.7l0,5.4C-77.7,401-76.1,401.9-74.7,401.2z"/>
+			<radialGradient id="XMLID_12_" cx="-105.0347" cy="427.8751" r="4.48" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+				<stop  offset="1" style="stop-color:#00FFFF"/>
+			</radialGradient>
+			<path id="XMLID_5_" fill="url(#XMLID_12_)" stroke="#000000" stroke-width="0.2" stroke-miterlimit="10" d="M-109.5,426.6
+				l2.7,4.6c0.8,1.3,2.7,1.3,3.4,0l2.7-4.6c0.8-1.3-0.2-3-1.7-3l-5.4,0C-109.3,423.7-110.2,425.3-109.5,426.6z"/>
+		</g>
+	</g>
+</g>
+</svg>

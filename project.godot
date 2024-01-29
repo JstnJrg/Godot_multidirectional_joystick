@@ -15,7 +15,7 @@ _global_script_classes=[ {
 "path": "res://addons/scripts/joystick.gd"
 } ]
 _global_script_class_icons={
-"joystick": "res://addons/icons/icon.svg"
+"joystick": "res://addons/icon.svg"
 }
 
 [application]
@@ -24,12 +24,13 @@ config/name="Joystick"
 config/description=" A multidirectionnal joystick that can be configured for games with limited steering.
 
 by:jstnjrg"
+run/main_scene="res://test/test3_360_direct.tscn"
 boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 config/icon="res://icon_official.svg"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/multidirectionnal joystick/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [gui]
 
