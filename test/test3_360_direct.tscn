@@ -18,7 +18,6 @@ position = Vector2( 151, 453 )
 script = ExtResource( 1 )
 bigger_texture = ExtResource( 3 )
 small_texture = ExtResource( 2 )
-interpolation_mode = 1
 amount_of_directions = 360
 draw_circle = false
 
