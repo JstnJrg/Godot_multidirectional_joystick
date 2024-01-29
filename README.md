@@ -1,9 +1,10 @@
 **Godot-multidirectional-joystick**
 - A multidirectional, configurable and flexible joystick that allows you to adapt it to different games depending on the mechanics. Pides adjusts them to games of 2, 4, 8 and many more directions. supports n-upper directions.
 
-**Why you should use
+**Why you should use**
  - It is configurable and allows you to define a series of options,
- - in addition to including a series of available textures.
+ - in addition to including a series of available textures;
+ - BTW The transition mode is interpolable.
    
 ![Inspector](https://raw.githubusercontent.com/JstnJrg/Godot_multidirectional_joystick/main/scr_sht/img_42046635044444.png)
 ![Image 1](https://raw.githubusercontent.com/JstnJrg/Godot_multidirectional_joystick/main/scr_sht/img_1009368603.png)
