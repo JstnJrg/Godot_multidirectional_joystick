@@ -4,13 +4,13 @@
 **Why you should use**
  - It is configurable and allows you to define a series of options,
  - in addition to including a series of available textures;
- - BTW The transition mode is interpolable.
+ - It is ideal for mobile games
    
-![Inspector](https://raw.githubusercontent.com/JstnJrg/Godot_multidirectional_joystick/main/scr_sht/img_42046635044444.png)
-![Image 1](https://raw.githubusercontent.com/JstnJrg/Godot_multidirectional_joystick/main/scr_sht/img_1009368603.png)
-![Image 2](https://raw.githubusercontent.com/JstnJrg/Godot_multidirectional_joystick/main/scr_sht/img_1958655669.png)
-![Image 3](https://raw.githubusercontent.com/JstnJrg/Godot_multidirectional_joystick/main/scr_sht/img_2660451553.png)
-
+![Inspector](https://raw.githubusercontent.com/JstnJrg/Godot_multidirectional_joystick/main/images/inspector.png)
+![Image 1](https://raw.githubusercontent.com/JstnJrg/Godot_multidirectional_joystick/main/images/IMG_1005252650.png)
+![Image 2](https://raw.githubusercontent.com/JstnJrg/Godot_multidirectional_joystick/main/images/IMG_1016394035.png)
+![Image 3](https://raw.githubusercontent.com/JstnJrg/Godot_multidirectional_joystick/main/images/IMG_1871086566.png)
+![Image 3](https://raw.githubusercontent.com/JstnJrg/Godot_multidirectional_joystick/main/images/IMG_2487721270.png)
 
 **Configuring the Addon**
  - Go to Project Settings -> Plugin and enable the plugin
