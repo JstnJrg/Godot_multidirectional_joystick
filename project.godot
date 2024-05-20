@@ -22,7 +22,7 @@ window/size/viewport_height=480
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/multidirectionnal joystick/plugin.cfg")
+disabled=PackedStringArray("res://addons/multidirectionnal joystick/plugin.cfg")
 
 [input_devices]
 
