@@ -1,0 +1,83 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg4kavf5m2w8a"]
+
+[ext_resource type="Script" path="res://examples/HSClass.gd" id="1_4wvof"]
+[ext_resource type="Script" path="res://examples/TSClass.gd" id="2_vk2gn"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 207.0
+offset_bottom = 179.0
+
+[node name="sensitivity_area" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+min_value = 40.0
+max_value = 150.0
+step = 0.1
+value = 40.0
+tick_count = 13
+ticks_on_borders = true
+script = ExtResource("1_4wvof")
+
+[node name="amount_dr" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+min_value = 2.0
+max_value = 120.0
+value = 2.0
+tick_count = 13
+ticks_on_borders = true
+script = ExtResource("1_4wvof")
+
+[node name="softnessOff" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+tick_count = 13
+ticks_on_borders = true
+script = ExtResource("1_4wvof")
+
+[node name="softnessOn" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+tick_count = 13
+ticks_on_borders = true
+script = ExtResource("1_4wvof")
+
+[node name="draw_line" type="CheckBox" parent="VBoxContainer"]
+layout_mode = 2
+text = "draw_line"
+
+[node name="draw_circle" type="CheckBox" parent="VBoxContainer"]
+layout_mode = 2
+text = "draw_circle"
+
+[node name="draw_sensitivity_area" type="CheckBox" parent="VBoxContainer"]
+layout_mode = 2
+text = "sensitivity_area"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+offset_left = 301.0
+offset_top = 9.0
+offset_right = 470.0
+offset_bottom = 180.0
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+text = "big texture"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer2"]
+layout_mode = 2
+script = ExtResource("2_vk2gn")
+textures_dir = "res://addons/multidirectionnal joystick/textures"
+
+[node name="Label2" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+text = "small texture"
+
+[node name="OptionButton2" type="OptionButton" parent="VBoxContainer2"]
+layout_mode = 2
+script = ExtResource("2_vk2gn")
+textures_dir = "res://addons/multidirectionnal joystick/textures"
+bigger = false

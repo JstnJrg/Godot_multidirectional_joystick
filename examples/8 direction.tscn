@@ -1,0 +1,115 @@
+[gd_scene load_steps=9 format=3 uid="uid://q5kkfj8d23r2"]
+
+[ext_resource type="Script" path="res://addons/multidirectionnal joystick/script/joystick.gd" id="1_xthid"]
+[ext_resource type="Texture2D" uid="uid://binbbs1n05hjp" path="res://addons/multidirectionnal joystick/textures/bigger.svg" id="2_5fj4g"]
+[ext_resource type="Texture2D" uid="uid://n51s73nqvxbn" path="res://addons/multidirectionnal joystick/textures/smaller_2.svg" id="3_vmljr"]
+[ext_resource type="Texture2D" uid="uid://bxfbntuxvv3mw" path="res://icon.svg" id="4_2gr5b"]
+[ext_resource type="PackedScene" uid="uid://dg4kavf5m2w8a" path="res://examples/ui.tscn" id="5_mvoue"]
+
+[sub_resource type="GDScript" id="GDScript_e8xaa"]
+script/source = "extends Node2D
+
+
+@onready var joystick : MultidirectionnalJoystick = $MultidirectionnalJoystick
+@onready var sprite_2d = $Sprite2D
+@onready var line_2d = $Line2D
+
+@onready var sensitivity_area :  HSlider = $UI/VBoxContainer/sensitivity_area 
+@onready var amount_dr : HSlider = $UI/VBoxContainer/amount_dr
+@onready var softness_off : HSlider = $UI/VBoxContainer/softnessOff
+@onready var softness_on : HSlider = $UI/VBoxContainer/softnessOn
+@onready var draw_line : CheckBox = $UI/VBoxContainer/draw_line
+@onready var draw_circle : CheckBox = $UI/VBoxContainer/draw_circle
+@onready var draw_sensitivity_area : CheckBox = $UI/VBoxContainer/draw_sensitivity_area
+@onready var option_button := $UI/VBoxContainer2/OptionButton as TS
+@onready var option_button_2 := $UI/VBoxContainer2/OptionButton2 as TS
+
+
+
+var dir : Vector2
+var speed := 300.0
+
+func _ready():
+	connect_signals()
+
+func connect_signals ():
+	
+	var load_txt := func(indx: int,op_button: TS): 
+		
+		var meta_k : String = op_button.get_item_text(indx)
+		var metadata : String = op_button.get_meta(meta_k,\"\")
+		var k := metadata.begins_with(\"b\")
+		
+		if metadata.is_empty(): return
+		joystick.set(\"bigger_texture\" if op_button.bigger else \"small_texture\",load(metadata))
+	
+	joystick.joystick_change.connect(change_direction)
+	sensitivity_area.value_changed.connect(func(value): joystick.sensitivity_area = value)
+	amount_dr.value_changed.connect(func(value): joystick.amount_of_directions = value)
+	softness_off.value_changed.connect(func(value): joystick.softness_off = value)
+	softness_on.value_changed.connect(func(value): joystick.softness_on = value)
+	draw_line.toggled.connect(func(value): joystick._draw_line = value)
+	draw_circle.toggled.connect(func(value): joystick._draw_circle = value)
+	draw_sensitivity_area.toggled.connect(func(value): joystick.draw_sensitivity_area = value)
+	
+	
+	option_button_2.item_selected.connect(load_txt.bind(option_button_2))
+	option_button.item_selected.connect(load_txt.bind(option_button))
+
+
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	
+	sprite_2d.rotation = rotate_toward(sprite_2d.rotation,dir.angle(),0.6)
+	sprite_2d.translate(dir*speed*delta)
+	
+	if dir:
+		line_2d.add_point(sprite_2d.global_position)
+		if line_2d.get_point_count() > 100: line_2d.remove_point(0)
+
+func change_direction (dir_joystick: Vector2):
+	dir = dir_joystick
+
+
+
+"
+
+[sub_resource type="Curve" id="Curve_56a14"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.47561, 0.788679), 0.835472, 0.835472, 0, 0, Vector2(0.971545, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_wih4i"]
+interpolation_mode = 2
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0, 0.621053, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.211765, 0.239216, 0.321569, 1, 0.301961, 0.462745, 0.321569, 1)
+
+[node name="main" type="Node2D"]
+script = SubResource("GDScript_e8xaa")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(117, 188, 223, 192)
+width = 64.0
+width_curve = SubResource("Curve_56a14")
+gradient = SubResource("Gradient_wih4i")
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="MultidirectionnalJoystick" type="Node2D" parent="."]
+position = Vector2(114, 377)
+script = ExtResource("1_xthid")
+bigger_texture = ExtResource("2_5fj4g")
+small_texture = ExtResource("3_vmljr")
+sensitivity_area = 72.769
+dead_margin = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(246, 190)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_2gr5b")
+
+[node name="UI" parent="." instance=ExtResource("5_mvoue")]
