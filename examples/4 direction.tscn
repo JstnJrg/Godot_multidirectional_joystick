@@ -40,7 +40,7 @@ func connect_signals ():
 		var k := metadata.begins_with(\"b\")
 		
 		if metadata.is_empty(): return
-		joystick.set(\"bigger_texture\" if k else \"small_texture\",load(metadata))
+		joystick.set(\"bigger_texture\" if op_button.bigger else \"small_texture\",load(metadata))
 	
 	joystick.joystick_change.connect(change_direction)
 	sensitivity_area.value_changed.connect(func(value): joystick.sensitivity_area = value)
